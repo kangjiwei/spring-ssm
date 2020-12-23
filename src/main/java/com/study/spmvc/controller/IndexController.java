@@ -55,10 +55,7 @@ public class IndexController {
     public String register(User user) {
         logger.info("注册用户信息:{"+ user.getName() +"}");
         User getUser = userService.queryUserByNameAndPassword(user);
-        if (user.getName() != "") {
-            logger.info("用户{"+ user.getName()+"}注册成功！");
-            return "1";
-        } else if (!StringUtils.isEmpty(getUser)) {
+        if (!StringUtils.isEmpty(getUser)) {
             logger.info("用户{"+user.getName()+"}已经存在！");
             return "2";
         } else {
