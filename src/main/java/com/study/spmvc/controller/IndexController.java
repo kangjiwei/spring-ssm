@@ -68,7 +68,7 @@ public class IndexController {
             }else{
                 logger.info("用户新增失败！");
             }
-            return "0";
+            return "1";
         }
     }
 
