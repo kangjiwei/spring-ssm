@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.study.spmvc.mappers.IUserMapper">
+
+
+    <resultMap id="BaseResultMap" type="com.study.spmvc.bean.User" >
+        <id column="ID" property="id" jdbcType="VARCHAR" />
+        <result column="NAME" property="name" jdbcType="VARCHAR" />
+        <result column="PASSWORD" property="password" jdbcType="DECIMAL" />
+        <result column="BIRTHDAY" property="birthday" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+    ID, NAME, PASSWORD, BIRTHDAY
+  </sql>
+    <insert id="addUser" parameterType="com.study.spmvc.bean.User">
+        insert into
+         school.user
+        (id,name,password)
+        value
+        (#{id},#{name},#{password})
+    </insert>
+
+    <select id="queryUserByNameAndPassword" resultMap="BaseResultMap" parameterType="com.study.spmvc.bean.User" >
+        select
+        <include refid="Base_Column_List" />
+        from school.user
+        where
+         name=#{name}
+        and
+         password=#{password}
+    </select>
+</mapper>

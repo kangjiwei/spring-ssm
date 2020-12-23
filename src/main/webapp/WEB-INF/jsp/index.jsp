@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <html>
 <head>
+    <title>登录页面</title>
     <meta charset="UTF-8">
     <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript">
@@ -42,7 +43,7 @@
 
 <fieldset>
     用户名:<input type="text" id="name"><br>
-    密码:<input type="password" id="password"><br>
+    密&nbsp;&nbsp;&nbsp;码:<input type="password" id="password"><br>
     <input type="button" id="submit" value="登录"><br>
 </fieldset>
 </body>

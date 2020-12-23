@@ -1,4 +1,4 @@
-package cn.edu.cqie.spmvc.controller;
+package com.study.spmvc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

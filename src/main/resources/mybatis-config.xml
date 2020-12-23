@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <!-- 设置驼峰匹配 -->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <mappers>
+        <!-- 映射器告诉MyBatis到哪里去找映射文件 -->
+        <!--  使用 / 不适用. -->
+       <!-- <mapper resource="com/study/spmvc/mappers/*.xml"/>-->
+        <!-- 扫描包下的所有xml文件 -->
+        <package name="com.study.spmvc.mapping.*"></package>
+    </mappers>
+
+</configuration>
